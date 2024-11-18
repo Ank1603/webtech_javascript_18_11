@@ -1,0 +1,24 @@
+<!-- //it is object used to handle only async operations
+//ajax is a asynchronous operation of promise and also http request
+//promise has 3 states--
+//1.pending state---default state
+//2.fulfilled state
+//3.rejected state
+we have 2 handler->
+1.then handler---fulfilled state
+2.catch handler---rejected state -->
+<script>
+  let record = new Promise(function (res, rej) {
+    console.log(typeof res, typeof rej);
+    // res("API Called!");
+    rej("API Failed!");
+  });
+  console.log(record);
+
+  record.then(function (data) {
+    console.log(data);
+  });
+  record.catch(function (data) {
+    console.log(data);
+  });
+</script>
